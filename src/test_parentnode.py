@@ -15,8 +15,7 @@ class TestParentNode(unittest.TestCase):
         child_node = ParentNode("span", [grandchild_node])
         parent_node = ParentNode("div", [child_node])
         self.assertEqual(
-            parent_node.to_html(),
-            "<div><span><b>grandchild</b></span></div>",
+            parent_node.to_html(), "<div><span><b>grandchild</b></span></div>"
         )
 
     def test_to_html_with_tag_missing(self):
